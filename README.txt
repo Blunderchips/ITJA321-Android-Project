@@ -9,6 +9,7 @@ This folder is my submision for my Android project. It contains:
 
  * Android studio project (JA_Project);
  * Submission (ITJA321 Android Project - Matthew Van der Bijl (xq9x3wv31).zip); 
+ * Theory turnitin reciept (Android Project Documentation Digital Receipt.pdf);
  * The project specifications (ITJA321 - Project - Paper  S2 2018 (V1.0).pdf); and
  * This README file (README.txt)
 

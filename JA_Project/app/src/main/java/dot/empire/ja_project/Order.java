@@ -8,9 +8,10 @@ import android.widget.Button;
 
 /**
  * Food ordering activity.
- * Created 26/09/2018
+ * Created 26/09/2018.
  *
  * @author Matthew Van der Bijl (xq9x3wv31)
+ * @see android.view.View.OnClickListener
  */
 public class Order extends FragmentActivity {
 
@@ -28,11 +29,11 @@ public class Order extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
 
-        // 2.5
+        // 2.56
         this.btnOrderfood = findViewById(R.id.btnOrderFood);
         this.btnLogout = findViewById(R.id.btnLogout);
 
-        // 2.6
+        // 2.
         this.btnOrderfood.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -49,3 +50,4 @@ public class Order extends FragmentActivity {
         });
     }
 }
+

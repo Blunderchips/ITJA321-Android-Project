@@ -1,5 +1,6 @@
 package dot.empire.ja_project;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -8,15 +9,15 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.Arrays;
 
 /**
  * A simple {@link Fragment} subclass. Activities that contain this fragment must implement the to
- * handle interaction events.
+ * handle interaction events. Uses {@Link AlertDialog}.
  *
  * @author Matthew Van der Bijl (xq9x2wv31)
+ * @see android.app.AlertDialog.Builder
  */
 public class ListFragment extends Fragment implements AdapterView.OnItemClickListener {
 
@@ -53,6 +54,11 @@ public class ListFragment extends Fragment implements AdapterView.OnItemClickLis
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        Toast.makeText(view.getContext(), String.format("%s has food ordered", food[i].split(" ")[1]), Toast.LENGTH_SHORT).show();
+        // Toast.makeText(view.getContext(), String.format("%s has food ordered", food[i].split(" ")[1]), Toast.LENGTH_SHORT).show();
+        new AlertDialog.Builder(view.getContext()).setTitle("Item purchased")
+                .setMessage(String.format("%s has food ordered", food[i].split(" ")[1]))
+                .setIcon(android.R.drawable.ic_dialog_info)
+                .show();
     }
+    // End 2.8
 }
