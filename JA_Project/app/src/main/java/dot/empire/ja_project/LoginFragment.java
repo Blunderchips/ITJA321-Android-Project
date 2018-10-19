@@ -3,6 +3,7 @@ package dot.empire.ja_project;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,7 +43,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
     // Inflate the layout for this fragment
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         this.parent = inflater.inflate(R.layout.layout_login, container, false);
 
         Button btnLogin = parent.findViewById(R.id.btnLogin);

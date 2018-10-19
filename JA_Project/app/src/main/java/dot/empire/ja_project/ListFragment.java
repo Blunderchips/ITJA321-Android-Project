@@ -1,7 +1,9 @@
 package dot.empire.ja_project;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,8 +26,9 @@ public class ListFragment extends Fragment implements AdapterView.OnItemClickLis
     /**
      * Available food and prices.
      */
-    private String[] food;
+    private final String[] food;
 
+    @SuppressLint("DefaultLocale")
     public ListFragment() {
         this.food = new String[]{
                 String.format("R%.2f %s", 2.14f, "Hotdog"),
@@ -39,7 +42,7 @@ public class ListFragment extends Fragment implements AdapterView.OnItemClickLis
 
     // 2.8
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_list, container, false);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(view.getContext(),
